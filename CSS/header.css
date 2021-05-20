@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    }
+
+body { 
+        font-family: 'DINPro',Arial,sans-serif;
+}
+
+.header{
+  width: 100%;
+  height: 75px;
+  display: block;
+  background-color: #3c3e42;
+  padding: 10px;
+  
+}
+
+.header-right {
+    float: right;
+    text-align: center;
+    margin: 15px 20px;
+    }
+
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 5px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #0095da;
+  text-decoration: none;
+}
+
+.header a.active {
+  color: white;
+}
+
+.inner-header{
+  width: 100px;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  background-color: #3c3e42;
+  
+}
+
+.navigation{
+  float: right;
+  height: 100%;
+  text-align: center;
+  //margin-right: 2em;
+}
+
+.navigation ul {
+  float: right;
+  margin-right: 20px;
+}
+
+.navigation li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 15px 15px;
+}
+
+.navigation li a {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  color: whitesmoke;
+  font-size: 18px;
+  }
+
+.logo {
+    top: 10px;
+      width: 159px;
+      height: 57px;   
+      margin-left: 2em;
+      position: absolute;
+  }
+
+label #btn, #cancel{
+    color: white;
+    font-size: 30px;
+    line-height: 60px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 1000px){
+    .logo{
+        top: 15px;
+        width: 120px;
+        height: 43px;    
+      }
+
+      .navigation li {
+        margin: 15px 5px;
+    }
+
+      .navigation li a {
+          font-size: 15px;
+          
+      }
+}
+
+@media (max-width: 740px){
+
+    .logo{
+        right: 40px;   
+      }
+
+    label #btn{
+        float: right;
+        display: block;
+    }
+
+    .navigation {
+        position: absolute;
+        width: 50%;
+        min-height: 150%;
+        background: #464b53;
+        top: 75px;
+        left: -100%;
+        transition: all .5s;
+    }
+
+    .navigation li {
+        text-align: center;
+        top: 30px;
+        position: relative;
+        display:block;
+        width:200px; 
+        height: 75px;
+        padding: 10px;
+        margin: 20px 0;
+        left: 20%;
+    }
+
+      .navigation li a {
+          font-size: 20px;
+      }
+
+      #check:checked ~ul{
+          left: 0;
+      }
+
+      #check:checked ~ label #btn{
+          display: none;
+      }
+
+      #check:checked ~ label #cancel{
+          display: block;
+      }
+}
